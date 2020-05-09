@@ -1,2 +1,0 @@
-# quinn
-website for KQ
