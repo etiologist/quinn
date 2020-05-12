@@ -7,7 +7,6 @@
     color: #0294A5; light blue
     color: #A79C93; gray
     color: #C1403D; red
-
 */
 
 * {
@@ -152,6 +151,11 @@ main {
 
 .banner .content-container {
     padding:0 0 0 1.5rem;
+    width: 100%;
+}
+
+.banner img {
+    max-height: 600px;
 }
 
 .banner #soc {
