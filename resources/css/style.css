@@ -1,42 +1,59 @@
 /* Universial */
 
-html {
-    font-size: 18px; 
-    font-family: Helvetica, arial, sans-serif;
-    color: rgb(73, 65, 65); 
-    box-sizing: border-box;  
+/* colors for site
+
+    color: #04060F; v dark blue
+    color: #03353E; mid blue
+    color: #0294A5; light blue
+    color: #A79C93; gray
+    color: #C1403D; red
+
+*/
+
+* {
+    color: white;
 }
 
-h1, h2, h3, h4, h5, h6, a, p, button {
-    color: rgb(73, 65, 65);
+html, body {
+    font-size: 16px; 
+    font-family: "montserratregular", "open_sansregular", sans-serif;
+    box-sizing: border-box;
+    min-height: 100%; 
+}
+
+a {
+    text-decoration: none;
 }
 
 h1 {
-    font-size: 3.125rem;
-    font-weight: bold;
-    line-height: 4rem;
-    padding: 10px 0;
+    font-size: 4.25rem;
+    font-family: "montserratextrabold";
 }
 
 h2 {
-    font-size: 2.5rem;
-    font-weight: normal;
-    line-height: 3rem;
-    padding: 10px 0;
+    font-size: 2.62rem;
+    font-family: "montserratbold"
 }
 
 h3 {
-    font-size: 1.5rem;
-    font-weight: normal;
-    line-height: 2rem;
-    padding: 10px 0;
+    font-size: 1.62rem;
 }
 
-.flex-container{
+p {
+    font-size: 1rem;
+}
+
+.flex-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
+    height: 100%;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+
 }
 
 .flex-container img {
@@ -44,143 +61,127 @@ h3 {
     overflow: hidden;
 }
 
-button {
+/* button {
     background-color:  rgb(73, 65, 65);
     color: white;
     font-size: 1.5rem;
     padding: 8px 0;
     border: 0;
-}
+} */
+
+
 
 /* Header Desktop */
 
 header {
-    height: 64px;
+    height: 7.5rem;
     position: fixed;
     z-index: 1;
     width: 100%;
-    background-color: white;
+    background-color: #04060F;
 }
 
-header .content {
-    height: 100%;
+header .flex-container {
+    justify-content: space-between;
+    padding:0 1.5rem;
 }
 
 header .mobile {
     display: none;
 }
 
-header .logo {
-    flex: 1;
-    margin-left: 24px;
-    height: 32px;
-    display: flex;
+header h1 {
+    margin: 0;
+    font-family: "montserrat_subrayadabold";
 }
 
-header .logo .text {
-    text-transform: uppercase;
-    font-size: 26px;
-    padding-top:3px;
+header h1 span {
+    color: #04060F;
+    background-color: white;
     transition: 1s all ease-in-out;
 }
 
-header .logo span {
-    color:black;
-    font-weight: bold;
-    transition: 1s all ease-in-out;
-}
-
-header .logo span:hover {
-    color: rgb(73, 65, 65);
-    font-weight: normal;
-}
-
-header .logo .text:hover {
-    color: black;
-    font-weight: bold;
-}
-
-header nav {
-    margin-right: 24px;
+header h1 span:hover {
+    background-color: #04060F;
+    color: white;
 }
 
 header nav a {
-    padding-left: 16px;
-    transition: 500ms all ease-in-out;
+    padding: 1rem;
+    transition: 1s all ease-in-out;
+}
+
+header nav a span {
+    color: #C1403D;
 }
 
 header nav a:hover {
-    color: black;
-    font-weight: bold;
+    color: #04060F;
+    background-color: white;
+    text-decoration: underline;
+}
+
+/* Header Tablet */
+
+@media only screen and (max-width: 1276px) {
+
+header nav {
+    display: none;
+}
 }
 
 /* Header Mobile */
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 690px) {
 
-header .desktop {
-    display: none;
+    header h1 {
+        font-size: 2.62rem;
+    }
 }
-
-header .mobile {
-    display: flex;
-    justify-content: space-between;
-    height: 100%;
-    flex: 1;
-}
-
-} 
 
 /* Banner */
 
+main {
+    padding-top:7.5rem;
+}
+
 .banner {
-    padding: 96px 24px 32px 24px;
-    justify-content: flex-start;
-    flex-wrap: nowrap;
-    background-color: lightgrey;
-
+    background-color: #A79C93;
+    padding:0 1.5rem;
 }
 
-.banner img {
-    max-width: 60%;
-    padding: 0 48px 0 0;
-    flex: 1;
+.banner .content-container {
+    padding:0 0 0 1.5rem;
 }
 
-.banner .content {
-    width: 40%;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
-    
+.banner #soc {
+    color: #03353E;
 }
 
-.banner .content h1, h2, button, .libs:
-    flex: 1;
-
-
-.banner button {
-    width: 100%;
-    transition: 300ms all ease-in-out;
+.banner #eth {
+    color: #0294A5;
 }
 
-.banner button:hover {
-    background-color: white;
-    color: rgb(73, 65, 65);
+/* Banner Mobile */
+
+@media only screen and (max-width: 1276px) {
+    .banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 0 1rem 0;
+    }
+
+    .banner img {
+        min-width: 100%;
+    }
+
+    .banner h1 {
+        font-size: 2.62rem;
+    }
+
+    .banner h2 {
+        font-size: 1.62rem;
+    }
+
 }
-
-.banner .libs  {
-    font-size: 1.5rem;
-    font-weight: normal;
-    line-height: 2rem;
-    padding: 10px 0;
-}
-
-.banner .libs label {
-    font-size: 2rem;
-}
-
-
 

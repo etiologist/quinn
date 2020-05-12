@@ -3,57 +3,45 @@
     
     <head>
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <link rel="stylesheet" type="text/css" href="resources/css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="resources/css/normalise.css"/>
         <link rel="stylesheet" type="text/css" href="resources/css/style.css"/>
+        <link rel="stylesheet" type="text/css" href="resources/fonts/fonts.css"/>
         <title>Katherine Quinn</title>
     </head>
 
     <body>
     
         <header>
-            <div class="desktop content flex-container">
             <!-- Desktop Header -->
-                <div class="desktop logo">
-                    <a href="index.html">
-                        <div class="text">
-                            <span id="Colmar">Katherine</span>Quinn
-                        </div>                   
-                    </a>
-                </div>            
+            <div class="desktop flex-container">
+                <h1>
+                    <a href="index.htmk"><span id="Colmar">Katherine</span>Quinn</a>
+                </h1>                              
                 <nav class="desktop">
                     <a href="#">Publications</a>
                     <a href="#">Presentations</a>
                     <a href="#">Teaching</a>
                     <a href="#">Blog</a>
-                    <a href="#">About</a>
+                    <a href="#"><span>About</span></a>
                 </nav>
             </div>
-                        
-            <!-- Mobile Header -->
-                <nav class="mobile flex-container">
-                    <a href="#"><img src="resources/images/ic-logo.svg" alt="colmar acadamy logo"/></a>
-                    <a href="#"><img src="resources/images/ic-on-campus.svg" alt="On Campus logo"/></a>
-                    <a href="#"><img src="resources/images/ic-online.svg" alt="Online logo"/></a>
-                    <a href="#"><img src="resources/images/ic-login.svg" alt="Sign in logo"/></a>
-                </nav>
         </header>
 
-        <section class="banner desktop flex-container">
-            <img src="resources/images/The Hive.jpg" alt="inside of the Hive">
-            <div class="content">
-                <h1>Librarian, sociologist, ethnographer</h1>
-                <h2>I love libraries and all sorts!</h2>
-                <!-- <button type="button">Start here</button> -->
-                <div class="libs">
-                    <label for="love">How much do you love libraries?</label>
-                    <br><br>
-                    <span>Hate 'em</span>
-                         <!--Add your code below-->
-                    <input type="range" name="love" id="love" min="0" max="5" step="0.5">
-                    <span>Love 'em</span>
+        <main>
+            <!-- Banner -->
+            <section class="banner flex-container">
+                <img src="resources/images/The Hive.jpg" alt="inside of the Hive">
+                <div class="content-container">
+                    <h1>librarian, <span id="soc">sociologist, </span><span id="eth">ethnographer.<span></h1>
+                    <h2>...affective responses to austerity...</h2>                    
                 </div>
-            </div>
-        </section>
+            </section>
+
+            <section>
+
+            </section>
+
+        </main>
 
     </body>
 </html>
