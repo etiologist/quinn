@@ -9,15 +9,24 @@
     color: #C1403D; red
 */
 
-* {
-    color: white;
-}
+
+
+// * {
+//     color: white;
+// }
 
 html, body {
     font-size: 16px; 
     font-family: "montserratregular", "open_sansregular", sans-serif;
     box-sizing: border-box;
     min-height: 100%; 
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
 }
 
 a {
@@ -92,6 +101,12 @@ header .mobile {
 header h1 {
     margin: 0;
     font-family: "montserrat_subrayadabold";
+}
+
+#typed {
+    color:black;
+    
+    
 }
 
 header h1 span {
@@ -188,4 +203,6 @@ main {
     }
 
 }
+
+
 
