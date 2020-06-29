@@ -1,5 +1,6 @@
 p {
     font-family: "montserratregular";
+    
 }
 
 body {
@@ -11,7 +12,7 @@ body {
   }
   
   .box {
-    width: 600px;
+    min-width: 600px;
     height: 400px;
     position: relative;
     margin: auto;
@@ -103,3 +104,4 @@ body {
     font-weight: 300;
     font-size: 72px;
   }
+
