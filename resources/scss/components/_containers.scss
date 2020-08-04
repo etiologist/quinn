@@ -1,140 +1,16 @@
 @import '../helpers/variables',
-        '../helpers/placeholders',
-        '../helpers/variables',
-        '../helpers/functions';
+'../helpers/placeholders',
+'../helpers/variables',
+'../helpers/functions';
 
-.container {
-    h3 {
-    line-height: normal;
-    }
-    flex: 1;
-    display: flex;
-    background-color: $lightBlue;
-    justify-items: center;
-    align-items: center;
-    flex-direction: column;
-    max-width: 28%;
-    min-width: 0px;
-    height: auto;
-    margin: 1rem;
-    .destintion {
-        text-align:center;
-    }
-    .weather {
-        text-align:center;
-    }
-    .sectiontitle {
-        text-align:center;
-    }
-    #weather img, #weather1 img{
-        margin: 0em;
-        line-height: 0;
-    }
+.boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  grid-template-rows: (100px 40px 40px 40px 60px);
+  justify-items: stretch;
+  align-items: end;
+  width: 600px;
+  height: 300px;
+  background: none;
+  gap: 0 0 ;
 }
-
-
-
-
-.center-container {
-    display: flex;
-    width: 100%;
-    padding: 0 2% 2% 2%;
-    box-sizing: border-box;
-    height: auto;
-  }
-  
-  .box {
-    flex: 1;
-    transition: .5s;
-    margin: 0 2%;
-    line-height: 0;
-  }
-  
-  .box > img {
-    width: 200%;
-    height: 100%;
-    object-fit: cover; 
-    transition: .5s;
-  }
-    
-  .box:hover { flex: 1 1 50%; }
-  .box:hover > img {
-    width: 100%;
-    height: auto;
-  }
-
-.center-container2 {
-    display:flex;
-  
-    align-items:center;
-    justify-content:center;  
-    height: 50vh;
-    margin: 0;
-    
-    
-    background-color:#f4f6f8;
-}
-
-
-  .single-container{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    height:100%;
-    width:100%;
-    overflow:hidden;
-  
-    &__image{
-      position:relative;
-      display:flex;
-      
-      flex-direction:column;
-      justify-content:center;
-      width:250px;
-      height:250px;
-      
-      border-radius:50%;
-      background-image:url('../../resources/photos/basque/donista.jpeg');
-      background-size:cover;
-      transition: ease-in-out .3s;
-      
-      z-index:2;
-      &:before{
-        content: ' ';
-        position:absolute;
-        top:0;
-        bottom:0;
-        left:0;
-        margin:auto;
-        
-        background: inherit;
-        background-position:bottom;
-        filter:blur(40px) saturate(0%);
-        transform:scaleX(0.4);
-        transition:ease-in-out .4s;
-        border-radius:120px;
-        transform-origin:right;
-        opacity:0;
-        
-        z-index:-1;
-      }
-      &:hover{
-        border-radius:0;
-        width:450px;
-        height:310px;
-        
-        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(9, 55, 53, 0.08), 0px 16px 24px rgba(9, 55, 53, 0.1), 0px 24px 32px rgba(9, 55, 53, 0.14);
-        &:before{
-          width:100%;
-          
-          opacity: 0.18;
-          filter:blur(10px) saturate(100%);
-          transform:scale(2.8) translate3d(-18%, 0px, 0px);
-        }        
-      }
-    }
-  }
-  
-
-
-
